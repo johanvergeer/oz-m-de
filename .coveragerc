@@ -1,0 +1,5 @@
+[run]
+include = oz_m_de/*
+omit = *migrations*, *tests*
+plugins =
+    django_coverage_plugin
