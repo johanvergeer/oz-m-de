@@ -1,0 +1,665 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-03-26 15:21+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: de_DE\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: account/email/email_confirmation_message.txt:1
+#, python-format
+msgid ""
+"Hello from %(site_name)s!\n"
+"\n"
+"You're receiving this e-mail because user %(user_display)s at "
+"%(site_domain)s has given yours as an e-mail address to connect their "
+"account.\n"
+"\n"
+"To confirm this is correct, go to %(activate_url)s\n"
+msgstr ""
+"Hallo von %(site_name)s!\n"
+"\n"
+"Sie erhalten dieser E-Mail weil user %(user_display)s at %(site_domain)s "
+"Dieser E-Mail-Adresse gegeben hat, um sie zu verbinden account.\n"
+"\n"
+"Um dieses zu bestätigen, gehe zu:  %(activate_url)s\n"
+
+#: account/email/email_confirmation_message.txt:7
+#, python-format
+msgid ""
+"Thank you from %(site_name)s!\n"
+"%(site_domain)s"
+msgstr ""
+"Vielen Dank von %(site_name)s!\n"
+"%(site_domain)s"
+
+#: account/email/email_confirmation_subject.txt:3
+msgid "Please Confirm Your E-mail Address"
+msgstr "Bitte bestätigen Sie Ihre E-mail Adresse"
+
+#: common/crispy_forms/bootstrap.py:19
+#: oz_m_de/templates/organizations/organization_delete.html:14
+#: oz_m_de/templates/organizations/organization_form.html:36
+#: oz_m_de/templates/organizations/organization_opening_hours.html:26
+msgid "Cancel"
+msgstr "Annulierenþ"
+
+#: common/crispy_forms/bootstrap.py:22
+#: oz_m_de/templates/organizations/organization_opening_hours.html:27
+msgid "Save"
+msgstr "Speichern"
+
+#: common/templatetags/get_opening_hours.py:25
+msgid "<div class=\"homepage-opened-today\">{} to {}</div>"
+msgstr "<div class=\"homepage-opened-today\">{} bis {}</div>"
+
+#: common/templatetags/get_opening_hours.py:34
+msgid "<div class=\"homepage-opened-today\">Closed today</div>"
+msgstr "<div class=\"homepage-opened-today\">Heute geschlossen</div>"
+
+#: organizations/forms.py:52 organizations/models.py:166
+msgid "Monday"
+msgstr "Montag"
+
+#: organizations/forms.py:53 organizations/models.py:168
+msgid "Tuesday"
+msgstr "Dienstag"
+
+#: organizations/forms.py:54
+msgid "wednesday"
+msgstr "Mittwoch"
+
+#: organizations/forms.py:55 organizations/models.py:172
+msgid "Thursday"
+msgstr "Donnerstag"
+
+#: organizations/forms.py:56 organizations/models.py:174
+msgid "Friday"
+msgstr "Freitag"
+
+#: organizations/forms.py:57 organizations/models.py:176
+msgid "Saturday"
+msgstr "Samstag"
+
+#: organizations/forms.py:58 organizations/models.py:178
+msgid "Sunday"
+msgstr "Sonntag"
+
+#: organizations/forms.py:102 organizations/forms.py:106
+msgid "Opening time requires a closing time"
+msgstr "Wenn Sie eine Öffnungszeit einführen soll auch eine Slusszeit eingeführt werden"
+
+#: organizations/forms.py:104 organizations/forms.py:108
+msgid "Closing time requires an opening time"
+msgstr "Wenn Sie eine Schlusszeit einführen soll auch eine Öffnungszeit eingeführt werden"
+
+#: organizations/models.py:9
+msgid "Netherlands"
+msgstr "Niederlande"
+
+#: organizations/models.py:10
+msgid "Germany"
+msgstr "Deutschland"
+
+#: organizations/models.py:11
+msgid "Belgium"
+msgstr "Belgien"
+
+#: organizations/models.py:15 organizations/models.py:23
+msgid "Address"
+msgstr "Adresse"
+
+#: organizations/models.py:16
+msgid "Postal_code"
+msgstr "Postleitzahl"
+
+#: organizations/models.py:17
+msgid "City"
+msgstr "Stadt"
+
+#: organizations/models.py:18
+msgid "Country"
+msgstr "Land"
+
+#: organizations/models.py:52
+msgid "Organization Category"
+msgstr "Unternehmen Kategorie"
+
+#: organizations/models.py:53
+msgid "Organization categories"
+msgstr "Unternehmen Kategorien"
+
+#: organizations/models.py:56 organizations/models.py:189
+msgid "Rooms available"
+msgstr "Zimmer verfügbar"
+
+#: organizations/models.py:58
+msgid "Does rooms available apply to this organization category?"
+msgstr "Ist Zimmer verfügbar notwendig für dieser Unternehmen Kategorie?"
+
+#: organizations/models.py:145
+#: oz_m_de/templates/organizations/organization_detail.html:4
+msgid "Organization"
+msgstr "Unternehmen"
+
+#: organizations/models.py:147
+msgid "Name"
+msgstr "Name"
+
+#: organizations/models.py:149
+msgid "Category"
+msgstr "Kategorie"
+
+#: organizations/models.py:150
+msgid "Order"
+msgstr "Reihenfolge"
+
+#: organizations/models.py:151
+msgid ""
+"The order this organization will be displayed in the category. Organizations "
+"without this value will be ordered randomly."
+msgstr ""
+"Der Reihenfolge von dieses Unternehmen wird gezeigt in der Kategorie. "
+"Unternehmen ohne diesen Wert werden diese Unternehmen nach dem Zufallsprinzip gezeigt ."
+
+#: organizations/models.py:153
+msgid "Phone number"
+msgstr "Telefon Nummer"
+
+#: organizations/models.py:155
+msgid "Website"
+msgstr "Website"
+
+#: organizations/models.py:156
+msgid "Example: http://mywebsite.com or https://www.mywebsite.com"
+msgstr "Beispiel: http://meinewebsite.com oder https://www.meinewebsite.com"
+
+#: organizations/models.py:158
+msgid "Description"
+msgstr "Beschreibung"
+
+#: organizations/models.py:160
+msgid "Owner"
+msgstr "Betriebsinhaber"
+
+#: organizations/models.py:162
+msgid "Update opening hours daily"
+msgstr "Öffnungszeiten täglich aktualisieren"
+
+#: organizations/models.py:163
+msgid "Today"
+msgstr "Heute"
+
+#: organizations/models.py:170
+msgid "Wednesday"
+msgstr "Mittwoch"
+
+#: organizations/models.py:180
+msgid "Active"
+msgstr "Aktiv"
+
+#: organizations/models.py:181
+msgid "Show the organization on the website"
+msgstr "Zeig das Unternehmen auf die Website"
+
+#: organizations/models.py:182
+msgid "Approved"
+msgstr "Genehmigt"
+
+#: organizations/models.py:183
+msgid ""
+"The organization should be approved by the website administrator,If "
+"approved, the organization will be shown on the website."
+msgstr ""
+"Das Unternehmen soll genehmigt werden von der Website Administrator, wenn "
+"das Unternehmen zugelassen ist, wird es auf die Website gezeigt."
+
+#: organizations/models.py:185
+msgid "Blocked"
+msgstr "Gesperrt"
+
+#: organizations/models.py:186
+msgid "Organization is blocked and will not be shown on the website"
+msgstr "Das Unternehmen ist gesperrt und wird nicht auf die Website gezeigt"
+
+#: organizations/models.py:187
+msgid "Member"
+msgstr "Mitglied"
+
+#: organizations/models.py:187
+msgid "Is the organization a member"
+msgstr "Ist das Unternehmen ein Mitglied"
+
+#: organizations/models.py:190
+msgid "Are there currently rooms available?"
+msgstr "Sind in diesen Augenblick Zimmer verfügbar?"
+
+#: oz_m_de/templates/403_csrf.html:4 oz_m_de/templates/403_csrf.html:7
+msgid "Forbidden"
+msgstr "Verboten"
+
+#: oz_m_de/templates/403_csrf.html:9
+msgid "CSRF verification failed. Request aborted."
+msgstr "CSRF-Überprüfung fehlgeschlagen Anfrage abgebrochen"
+
+#: oz_m_de/templates/404.html:7
+msgid "Page not found"
+msgstr "Seite nicht gefunden"
+
+#: oz_m_de/templates/404.html:9
+msgid "This is not the page you were looking for."
+msgstr "Dies ist nicht die Seite, die Sie gesucht haben."
+
+#: oz_m_de/templates/500.html:4
+msgid "Server Error"
+msgstr "Serverfehler"
+
+#: oz_m_de/templates/500.html:7
+msgid "Ooops!!! 500"
+msgstr "Ooops!!! 500"
+
+#: oz_m_de/templates/500.html:9
+msgid "Looks like something went wrong!"
+msgstr "Sieht aus wie etwas schief gelaufen ist!"
+
+#: oz_m_de/templates/account/account_inactive.html:5
+#: oz_m_de/templates/account/account_inactive.html:8
+msgid "Account Inactive"
+msgstr "Konto Inaktiv"
+
+#: oz_m_de/templates/account/account_inactive.html:10
+msgid "This account is inactive."
+msgstr "Dieses Konto ist Inaktiv"
+
+#: oz_m_de/templates/account/email.html:7
+msgid "Account"
+msgstr "Konto"
+
+#: oz_m_de/templates/account/email.html:10
+msgid "E-mail Addresses"
+msgstr "E-Mail Adressen"
+
+#: oz_m_de/templates/account/email.html:13
+msgid "The following e-mail addresses are associated with your account:"
+msgstr "Die unterstehende E-Mail Adressen sind verbunden mit Ihr Konto"
+
+#: oz_m_de/templates/account/email.html:27
+msgid "Verified"
+msgstr "Bestätigt"
+
+#: oz_m_de/templates/account/email.html:29
+msgid "Unverified"
+msgstr "Ungeprüft"
+
+#: oz_m_de/templates/account/email.html:31
+msgid "Primary"
+msgstr "Primär"
+
+#: oz_m_de/templates/account/email.html:37
+msgid "Make Primary"
+msgstr "Mache es Primär"
+
+#: oz_m_de/templates/account/email.html:38
+msgid "Re-send Verification"
+msgstr "Bestätigung auf neu senden"
+
+#: oz_m_de/templates/account/email.html:39
+msgid "Remove"
+msgstr "Entfernen"
+
+#: oz_m_de/templates/account/email.html:46
+msgid "Warning:"
+msgstr "Warnung:"
+
+#: oz_m_de/templates/account/email.html:46
+msgid ""
+"You currently do not have any e-mail address set up. You should really add "
+"an e-mail address so you can receive notifications, reset your password, etc."
+msgstr ""
+"Sie haben noch keinen Email Adresse Eingeführt. Dass muss gemacht "
+"werdendamit Sie Benachrichtigungen bekommen können, Ihren Password resetten können usw."
+
+#: oz_m_de/templates/account/email.html:51
+msgid "Add E-mail Address"
+msgstr "Fügen Sie Ihre E-mail Adresse hinzu"
+
+#: oz_m_de/templates/account/email.html:56
+msgid "Add E-mail"
+msgstr "Fügen Sie Ihre E-mail hinzu"
+
+#: oz_m_de/templates/account/email.html:66
+msgid "Do you really want to remove the selected e-mail address?"
+msgstr "Möchten Sie wirklich alle ausgewählte Email Adressen entfernen?"
+
+#: oz_m_de/templates/account/email_confirm.html:6
+#: oz_m_de/templates/account/email_confirm.html:10
+msgid "Confirm E-mail Address"
+msgstr "Bestätige Email Adresse"
+
+#: oz_m_de/templates/account/email_confirm.html:16
+#, python-format
+msgid ""
+"Please confirm that <a href=\"mailto:%(email)s\">%(email)s</a> is an e-mail "
+"address for user %(user_display)s."
+msgstr ""
+"Bitte bestätigen Sie das <a href=\"mailto:%(email)s\">%(email)s</a> eine E-"
+"mailadresse istAdresse für Benützer %(user_display)s."
+
+#: oz_m_de/templates/account/email_confirm.html:20
+msgid "Confirm"
+msgstr "Bestätigen"
+
+#: oz_m_de/templates/account/email_confirm.html:27
+#, python-format
+msgid ""
+"This e-mail confirmation link expired or is invalid. Please <a href="
+"\"%(email_url)s\">issue a new e-mail confirmation request</a>."
+msgstr ""
+"Diese emailadresse ist nicht richtig oder ist verlaufen. Bitte <a href="
+"\"%(email_url)s\">fragen Sie um eine neue Email Bestätigung </a>."
+
+#: oz_m_de/templates/account/login.html:7
+#: oz_m_de/templates/account/login.html:11
+#: oz_m_de/templates/account/login.html:44 oz_m_de/templates/base.html:52
+msgid "Sign In"
+msgstr "Anmelden"
+
+#: oz_m_de/templates/account/login.html:16
+#, python-format
+msgid ""
+"Please sign in with one\n"
+"of your existing third party accounts. Or, <a href=\"%(signup_url)s\">sign "
+"up</a>\n"
+"for a %(site_name)s account and sign in below:"
+msgstr ""
+"Bitte anmelden mit einevon deine bestehende Konten. Oder, <a href="
+"\"%(signup_url)s\">Einschreiben</a>\n"
+"für ein %(site_name)s Konto und melden Sie sich Hierunten an:"
+
+#: oz_m_de/templates/account/login.html:26
+msgid "or"
+msgstr "oder"
+
+#: oz_m_de/templates/account/login.html:33
+#, python-format
+msgid ""
+"If you have not created an account yet, then please\n"
+"<a href=\"%(signup_url)s\">sign up</a> first."
+msgstr ""
+"Wenn Sie bis jetzt noch kein Konto erstellt haben, dann bitte<a href="
+"\"%(signup_url)s\">Einschreiben</a> zuerst."
+
+#: oz_m_de/templates/account/login.html:43
+msgid "Forgot Password?"
+msgstr "Password vergessen?"
+
+#: oz_m_de/templates/account/logout.html:5
+#: oz_m_de/templates/account/logout.html:8
+#: oz_m_de/templates/account/logout.html:17 oz_m_de/templates/base.html:45
+msgid "Sign Out"
+msgstr "Ausloggen"
+
+#: oz_m_de/templates/account/logout.html:10
+msgid "Are you sure you want to sign out?"
+msgstr "Sind Sie sich sicher dass Sie ausloggen möchten"
+
+#: oz_m_de/templates/account/password_change.html:6
+#: oz_m_de/templates/account/password_change.html:9
+#: oz_m_de/templates/account/password_change.html:14
+#: oz_m_de/templates/account/password_reset_from_key.html:5
+#: oz_m_de/templates/account/password_reset_from_key.html:8
+#: oz_m_de/templates/account/password_reset_from_key_done.html:4
+#: oz_m_de/templates/account/password_reset_from_key_done.html:7
+msgid "Change Password"
+msgstr "Password ändern"
+
+#: oz_m_de/templates/account/password_reset.html:7
+#: oz_m_de/templates/account/password_reset.html:11
+#: oz_m_de/templates/account/password_reset_done.html:6
+#: oz_m_de/templates/account/password_reset_done.html:9
+msgid "Password Reset"
+msgstr "Password zurücksetzen"
+
+#: oz_m_de/templates/account/password_reset.html:16
+msgid ""
+"Forgotten your password? Enter your e-mail address below, and we'll send you "
+"an e-mail allowing you to reset it."
+msgstr ""
+"Haben Sie Ihr Password vergessen? Geben Sie bitte Ihre Emailadresse unten "
+"ein, wir werden dir eine Email senden damit Sie es zurücksetzen können."
+
+#: oz_m_de/templates/account/password_reset.html:21
+msgid "Reset My Password"
+msgstr "Setze mein Password zurück"
+
+#: oz_m_de/templates/account/password_reset.html:24
+msgid "Please contact us if you have any trouble resetting your password."
+msgstr "Bitte nehmen Sie Kontakt mit uns auf wenn Sie Probleme haben um Ihren Password zurück zu setzen"
+
+#: oz_m_de/templates/account/password_reset_done.html:15
+msgid ""
+"We have sent you an e-mail. Please contact us if you do not receive it "
+"within a few minutes."
+msgstr ""
+"Wir haben dir eine Email geschickt. Bitte nehmen Sie Kontakt mit uns auf "
+"wenn Sie es nicht innerhalb von ein Par Minuten bekommen."
+
+#: oz_m_de/templates/account/password_reset_from_key.html:8
+msgid "Bad Token"
+msgstr "Schlechte Token"
+
+#: oz_m_de/templates/account/password_reset_from_key.html:12
+#, python-format
+msgid ""
+"The password reset link was invalid, possibly because it has already been "
+"used.  Please request a <a href=\"%(passwd_reset_url)s\">new password reset</a>."
+msgstr ""
+"Das zurücksetzen vom Password hat nicht funktioniert, vieleicht weil es "
+"schon benützt wordenist.  Bitte fragen Sie  <a href=\"%(passwd_reset_url)s\">new password reset</a>."
+
+#: oz_m_de/templates/account/password_reset_from_key.html:18
+msgid "change password"
+msgstr "Password ändern"
+
+#: oz_m_de/templates/account/password_reset_from_key.html:21
+#: oz_m_de/templates/account/password_reset_from_key_done.html:8
+msgid "Your password is now changed."
+msgstr "Dein Password ist geänderd"
+
+#: oz_m_de/templates/account/password_set.html:6
+#: oz_m_de/templates/account/password_set.html:9
+#: oz_m_de/templates/account/password_set.html:14
+msgid "Set Password"
+msgstr "Passwort festlegen"
+
+#: oz_m_de/templates/account/signup.html:6
+msgid "Signup"
+msgstr "Anmelden"
+
+#: oz_m_de/templates/account/signup.html:9
+#: oz_m_de/templates/account/signup.html:19 oz_m_de/templates/base.html:49
+msgid "Sign Up"
+msgstr "Unterschreiben"
+
+#: oz_m_de/templates/account/signup.html:11
+#, python-format
+msgid ""
+"Already have an account? Then please <a href=\"%(login_url)s\">sign in</a>."
+msgstr "Haben Sie schon ein Konto? <a href=\"%(login_url)s\">Anmelden</a>."
+
+#: oz_m_de/templates/account/signup_closed.html:5
+#: oz_m_de/templates/account/signup_closed.html:8
+msgid "Sign Up Closed"
+msgstr "Anmelden abgeschlossen"
+
+#: oz_m_de/templates/account/signup_closed.html:10
+msgid "We are sorry, but the sign up is currently closed."
+msgstr "Es tut uns Leid, aber das Anmelden ist an diesen Augenblick nicht möglich"
+
+#: oz_m_de/templates/account/verification_sent.html:5
+#: oz_m_de/templates/account/verification_sent.html:8
+#: oz_m_de/templates/account/verified_email_required.html:5
+#: oz_m_de/templates/account/verified_email_required.html:8
+msgid "Verify Your E-mail Address"
+msgstr "Überprüfen Sie Ihre Email Adresse"
+
+#: oz_m_de/templates/account/verification_sent.html:10
+msgid ""
+"We have sent an e-mail to you for verification. Follow the link provided to "
+"finalize the signup process. Please contact us if you do not receive it "
+"within a few minutes."
+msgstr ""
+"Wir haben Sie eine Email geschickt zur überprüfung. Folgen Sie den Link, "
+"damitSie diesen Anmeldeprozess enden können. Bitte kontaktieren Sie uns wenn "
+"Sieinnerhalb die nächte Par Minuten nichts bekommen haben"
+
+#: oz_m_de/templates/account/verified_email_required.html:12
+msgid ""
+"This part of the site requires us to verify that\n"
+"you are who you claim to be. For this purpose, we require that you\n"
+"verify ownership of your e-mail address. "
+msgstr ""
+"Diese Teil von diese Website verlangt von uns zu überprüfen dass\n"
+"Sie auch sind wer Sie behaupten zu sein. Für diesen Zweck, verlangen wir "
+"dass Sie\n"
+"überprüfen dass die Emailadresse Ihre ist. "
+
+#: oz_m_de/templates/account/verified_email_required.html:16
+msgid ""
+"We have sent an e-mail to you for\n"
+"verification. Please click on the link inside this e-mail. Please\n"
+"contact us if you do not receive it within a few minutes."
+msgstr ""
+"Wir haben dir eine Email geschickt zum\n"
+"überprüfen. Bitte klicken Sie auf den Link in dieser Email. Bitte "
+"kontaktieren Sie uns wenn Sie\n"
+"innerhalb die nächte Par Minuten nichts bekommen haben"
+
+#: oz_m_de/templates/account/verified_email_required.html:20
+#, python-format
+msgid ""
+"<strong>Note:</strong> you can still <a href=\"%(email_url)s\">change your e-mail address</a>."
+msgstr ""
+"<strong>Hinweis:</strong> Sie können noch immer <a href=\"%(email_url)s\">deine e-mail address ändern</a>."
+
+#: oz_m_de/templates/base.html:34
+msgid "Opening Hours Manderscheid"
+msgstr "Öffnungszeiten Manderscheid"
+
+#: oz_m_de/templates/base.html:42
+msgid "My Profile"
+msgstr "Mein Profil"
+
+#: oz_m_de/templates/organizations/organization_delete.html:5
+#: oz_m_de/templates/organizations/organization_delete.html:10
+msgid "Delete Organization"
+msgstr "Erstelle Unternehmen"
+
+#: oz_m_de/templates/organizations/organization_delete.html:13
+msgid "Are you sure you want to delete "
+msgstr "Sind Sie sich sicher dass Sie ausloggen möchten"
+
+#: oz_m_de/templates/organizations/organization_delete.html:15
+msgid "Yes, delete this organization"
+msgstr "Erstelle Unternehmen"
+
+#: oz_m_de/templates/organizations/organization_form.html:14
+msgid "This organization is currently blocked and will not be displayed on the website"
+msgstr "Das Unternehmen ist gesperrt und wird nicht auf die Website gezeigt"
+
+#: oz_m_de/templates/organizations/organization_form.html:21
+msgid "This organization is currently not active and is not displayed on the website."
+msgstr "Das Unternehmen ist gesperrt und wird nicht auf die Website gezeigt"
+
+#: oz_m_de/templates/organizations/organization_form.html:24
+msgid "This organization is displayed on the website"
+msgstr "Zeig das Unternehmen auf die Website"
+
+#: oz_m_de/templates/organizations/organization_form.html:27
+msgid "Email"
+msgstr "E-mail"
+
+#: oz_m_de/templates/organizations/organization_list.html:3
+#: oz_m_de/templates/organizations/organization_list.html:6
+msgid "Organizations"
+msgstr "Unternehmen"
+
+#: oz_m_de/templates/organizations/organization_list.html:7
+msgid "Create organization"
+msgstr "Erstelle Unternehmen"
+
+#: oz_m_de/templates/organizations/organization_list.html:22
+#: oz_m_de/templates/users/user_form.html:13
+msgid "Update"
+msgstr "Aktualisieren"
+
+#: oz_m_de/templates/organizations/organization_list.html:24
+#: oz_m_de/templates/organizations/organization_opening_hours.html:5
+#: oz_m_de/templates/organizations/organization_opening_hours.html:10
+msgid "Opening hours"
+msgstr "Öffnungszeiten"
+
+#: oz_m_de/templates/organizations/organization_list.html:26
+msgid "Delete"
+msgstr "Löschen"
+
+#: oz_m_de/templates/organizations/organization_list.html:30
+msgid "Set to No rooms available"
+msgstr "Auf keine Zimmer zur Verfügung stellen"
+
+#: oz_m_de/templates/organizations/organization_list.html:33
+msgid "Set to rooms available"
+msgstr "Auf Zimmer zur Verfügung stellen"
+
+#: oz_m_de/templates/organizations/organization_opening_hours.html:12
+msgid "Use a colon (:) as a separator between hours and minutes"
+msgstr "Benützen Sie bitte das : Zeichen zwisschen die Stunden und die Minuten"
+
+#: oz_m_de/templates/pages/home.html:3
+msgid "Opening hours Manderscheid"
+msgstr "Öffungszeiten Manderscheid"
+
+#: oz_m_de/templates/pages/home.html:9
+msgid "Opened today in Manderscheid"
+msgstr "Heute geöffned in Manderscheid"
+
+#: oz_m_de/templates/pages/home.html:15
+msgid "BACK TO HOME"
+msgstr "ZURÜCK ZUM HOMEPAGE"
+
+#: oz_m_de/templates/pages/home.html:56
+msgid "Opened today:"
+msgstr "Heute geöffned:"
+
+#: oz_m_de/templates/pages/home.html:85
+msgid "No information available"
+msgstr "Keine Informationen zur verfügung"
+
+#: oz_m_de/templates/pages/home.html:88
+msgid "Select a category"
+msgstr "Wählen Sie eine Kategorie"
+
+#: oz_m_de/templates/users/user_list.html:3
+#: oz_m_de/templates/users/user_list.html:7 oz_m_de/users/apps.py:7
+msgid "Users"
+msgstr "Benutzer"
+
+#: oz_m_de/users/admin.py:20
+msgid "This username has already been taken."
+msgstr "Dieser Benutzername wurde bereits erhoben."
+
+#: oz_m_de/users/models.py:16
+msgid "Name of User"
+msgstr "Name Benützer"

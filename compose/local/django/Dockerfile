@@ -2,6 +2,11 @@ FROM python:3.5
 
 ENV PYTHONUNBUFFERED 1
 
+ADD https://raw.githubusercontent.com/guilhem/apt-get-install/master/apt-get-install /usr/bin/
+RUN chmod +x /usr/bin/apt-get-install
+
+RUN apt-get-install gettext
+
 # Requirements have to be pulled and installed here, otherwise caching won't work
 COPY ./requirements /requirements
 RUN pip install -r /requirements/local.txt

@@ -2,6 +2,11 @@ FROM python:3.5
 
 ENV PYTHONUNBUFFERED 1
 
+ADD https://raw.githubusercontent.com/guilhem/apt-get-install/master/apt-get-install /usr/bin/
+RUN chmod +x /usr/bin/apt-get-install
+
+RUN apt-get-install gettext
+
 RUN groupadd -r django \
     && useradd -r -g django django
 
