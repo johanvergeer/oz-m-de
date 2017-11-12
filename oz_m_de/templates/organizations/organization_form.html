@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% load static i18n %}
+{% load crispy_forms_tags %}
+
+{% block title %}{{ title }}{% endblock %}
+
+{% block content %}
+    <div class="row">
+        <div class="col-sm-12">
+            <h2>{{ title }}</h2>
+            {% if form_action == "update" %}
+                {% if is_blocked %}
+                    <div class="alert alert-danger">
+                        {% trans "This organization is currently blocked and will not be displayed on the website" %}
+                    </div>
+                    {% elif not is_approved %}
+                    <div class="alert alert-info">{% trans "This organization has not been approved yet.
+                        At soon as it is approved, it will be shown displayed the website" %}</div>
+                    {% elif not is_active %}
+                    <div class="alert alert-warning">
+                        {% trans "This organization is currently not active and is not displayed on the website." %}
+                    </div>
+                {% else %}
+                    <div class="alert alert-success">{% trans "This organization is displayed on the website" %}</div>
+                {% endif %}
+                {% if owner_email %}
+                    <div>{% trans "Email" %}: {{ owner_email }}</div>
+                {% endif %}
+                <form action="{% url "organizations:update" pk %}" class="uniForm" method="post">
+            {% elif form_action == "create" %}
+                <form action="{% url "organizations:create" %}" class="uniForm" method="post">
+            {% endif %}
+            {% csrf_token %}
+            {% crispy organization_form %}
+            {% crispy address_form %}
+            <a role="button" class="btn btn-default" href="{% url "organizations:list" %}">{% trans "Cancel" %}</a>
+            <input type="submit" name="submit" value="Submit" class="btn btn-primary btn-submit" id="submit-id-submit"/>
+            </form>
+        </div>
+    </div>
+{% endblock content %}

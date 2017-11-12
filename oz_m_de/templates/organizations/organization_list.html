@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% load static i18n %}
+{% block title %}{% trans "Organizations" %}{% endblock %}
+
+{% block content %}
+    <h2>{% trans "Organizations" %}</h2>
+    <a class="btn btn-primary" href="{% url 'organizations:create' %}" role="button">{% trans "Create organization" %}</a>
+    <hr/>
+    <div class="list-group">
+        {% for organization in organization_list %}
+            <div class="list-group-item">
+                <div class="col-md-12">
+                    <div class="col-md-4"><h4 class="list-group-item-heading">{{ organization.name }}</h4></div>
+                    <div class="col-md-5"><h4 class="list-group-item-heading">| {{ organization.category }}</h4></div>
+                    {% if is_organization_admin %}
+                        <div class="col-md-2">Order: {{ organization.order }}</div>
+                    {% endif %}
+                </div>
+
+
+                <a href="{% url "organizations:update" organization.id %}"
+                   class="btn btn-primary btn-submit">{% trans "Update" %}</a>
+                <a href="{% url "organizations:opening-hours" organization.id %}"
+                   class="btn btn-primary btn-submit">{% trans "Opening hours" %}</a>
+                <a href="{% url "organizations:delete" organization.id %}"
+                   class="btn btn-primary btn-submit">{% trans "Delete" %} </a>
+                {% if organization.category.rooms_available_applies %}
+                    {% if organization.rooms_available %}
+                        <a href="{% url "organizations:rooms-available" organization.id %}"
+                           class="btn btn-success btn-submit">{% trans "Set to No rooms available" %}</a>
+                    {% else %}
+                        <a href="{% url "organizations:rooms-available" organization.id %}"
+                           class="btn btn-warning btn-submit">{% trans "Set to rooms available" %}</a>
+                    {% endif %}
+                {% endif %}
+            </div>
+        {% endfor %}
+    </div>
+{% endblock content %}

@@ -1,1 +1,96 @@
 {% extends "base.html" %}
+{% load static i18n %}
+{% block title %}{% trans "Opening hours Manderscheid" %}{% endblock %}
+{% load getattribute %}
+{% load get_opening_hours %}
+
+{% block content %}
+    <div class="jumbotron">
+        <div class="col-md-8 align-left"><h2>{% trans "Opened today in Manderscheid" %}</h2></div>
+        <div class="col-md-4" style="text-align: right"><img src="{% static "images/mscheid-logo-200-200.png" %}" class="mscheid-logo"></div>
+    </div>
+
+    <hr/>
+    <div class="col-md-2">
+        <div><a href="{% url "home" %}">{% trans "BACK TO HOME" %}</a></div>
+        <hr/>
+        <h4>{% trans "Categories" %}</h4>
+        {% for category in organization_types %}
+            <div><a href="{% url "home" %}?category={{ category.pk }}"
+                    class="homepage-category-link">{{ category.name }}</a></div>
+        {% endfor %}
+    </div>
+    <div class="list-group homepage-list col-md-10">
+        {% if organizations %}
+            {% for organization in organizations %}
+                {% if organization.is_member %}
+                    <div class="list-group-item">
+                        <div class="col-md-12">
+                            <h4 class="list-group-item-heading">{{ organization.name }}</h4>
+                        </div>
+                        <div class="col-md-4">
+                            {% for address in organization.addresses.all %}
+                                <address>
+                                    <div>{{ address.address }}</div>
+                                    <div>{{ address.postal_code }}, {{ address.city }}</div>
+                                    <div>{{ organization.phone_nr }}</div>
+                                    {% if organization.website %}
+                                        <div><a href="{{ organization.website }}"
+                                                target="_blank">{{ organization.website }}</a>
+                                        </div>
+                                    {% endif %}
+                                    {% if organization.rooms_available != None %}
+                                        {% if organization.rooms_available %}
+                                            <div class="rooms-available">Rooms available</div>
+                                        {% else %}
+                                            <div class="no-rooms-available">No Rooms available</div>
+                                        {% endif %}
+                                    {% endif %}
+                                </address>
+                            {% endfor %}
+                        </div>
+                        <div class="col-md-8">
+                            <div class="col-md-12">
+                                <div class="col-md-8 no-padding">
+                                    <div class="col-md-4 no-padding">
+                                        {% trans "Opened today:" %}
+                                    </div>
+                                    <div class="col-md-8">
+                                        {{ organization|get_opening_hours |safe }}
+                                    </div>
+                                </div>
+                            </div>
+                            {% if organization.description %}
+                                <div class="homepage-description col-md-12">
+                                    <hr/>
+                                    {{ organization.description }}
+                                </div>
+                            {% endif %}
+                        </div>
+                    </div>
+                {% else %}
+                    <div class="list-group-item" style="min-height: 100px;">
+                        <div class="col-md-12">
+                            <h4 class="list-group-item-heading">{{ organization.name }}</h4>
+                            {% for address in organization.addresses.all %}
+                                <address>
+                                    <div>{{ organization.phone_nr }}</div>
+                                </address>
+                            {% endfor %}
+                        </div>
+                    </div>
+                {% endif %}
+            {% endfor %}
+        {% elif branch %}
+            <div>{% trans "No information available" %}</div>
+        {% else %}
+            <div class="homepage-categories-containter">
+                <h1 style="text-align: center">{% trans "Select a category" %}</h1>
+                {% for type in organization_types %}
+                    <div class="col-md-4 homepage-categories" style="text-align: center">
+                        <a href="{% url "home" %}?category={{ type.pk }}">{{ type.name }}</a></div>
+                {% endfor %}
+            </div>
+        {% endif %}
+    </div>
+{% endblock content %}

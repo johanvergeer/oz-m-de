@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% load static i18n %}
+{% load crispy_forms_tags %}
+
+{% block title %}{% trans "Delete Organization" %}{% endblock %}
+
+{% block content %}
+    <div class="row">
+        <div class="col-sm-12">
+            <h2>{% trans "Delete Organization" %}</h2>
+            <form action="{% url "organizations:delete" organization.pk %}" method="post">
+                {% csrf_token %}
+                <p>{% trans "Are you sure you want to delete " %}{{ organization.name }}?</p>
+                <a role="button" class="btn btn-default" href="{% url "organizations:list" %}">{% trans "Cancel" %}</a>
+                <input type="submit" name="submit" value="{% trans "Yes, delete this organization" %}" class="btn btn-primary btn-submit" id="submit-id-submit"/>
+            </form>
+        </div>
+    </div>
+{% endblock content %}

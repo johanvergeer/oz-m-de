@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% load static i18n %}
+{% load crispy_forms_tags %}
+
+{% block title %}{% trans "Opening hours" %}{% endblock %}
+
+{% block content %}
+    <div class="row">
+        <div class="col-sm-12">
+            <h2>{% trans "Opening hours" %}</h2>
+            <form action="{% url "organizations:opening-hours" pk %}" class="uniForm" method="post">
+               <p>{% trans "Use a colon (:) as a separator between hours and minutes" %}</p>
+
+                {% csrf_token %}
+                {% if today_form %}
+                    {% crispy today_form %}
+                {% else %}
+                    {% crispy mon_form %}
+                    {% crispy tue_form %}
+                    {% crispy wed_form %}
+                    {% crispy thu_form %}
+                    {% crispy fri_form %}
+                    {% crispy sat_form %}
+                    {% crispy sun_form %}
+                {% endif %}
+                <a role="button" class="btn btn-default" href="{% url "organizations:list" %}">{% trans "Cancel" %}</a>
+                <input type="submit" name="submit" value="{% trans "Save" %}" class="btn btn-primary btn-submit"
+                       id="submit-id-submit"/>
+            </form>
+        </div>
+    </div>
+{% endblock content %}
