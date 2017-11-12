@@ -56,6 +56,7 @@ LOCAL_APPS = [
     # custom users app
     'oz_m_de.users.apps.UsersConfig',
     # Your stuff: custom apps go here
+    'oz_m_de.organizations.apps.OrganizationsConfig'
 ]
 
 # See: https://docs.djangoproject.com/en/dev/ref/settings/#installed-apps
