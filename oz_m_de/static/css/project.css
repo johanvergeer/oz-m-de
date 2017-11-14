@@ -12,10 +12,118 @@
   border-color: #eed3d7;
 }
 
+/* This is a fix for the bootstrap4 alpha release */
+@media (max-width: 47.9em) {
+  .navbar-nav .nav-item {
+    float: none;
+    width: 100%;
+    display: inline-block;
+  }
+
+  .navbar-nav .nav-item + .nav-item {
+    margin-left: 0;
+  }
+
+  .nav.navbar-nav.pull-xs-right {
+    float: none !important;
+  }
+}
+
+.list-group-item {
+  margin-bottom: 10px;
+}
+
 /* Display django-debug-toolbar.
    See https://github.com/django-debug-toolbar/django-debug-toolbar/issues/742
    and https://github.com/pydanny/cookiecutter-django/issues/317
 */
 [hidden][style="display: block;"] {
   display: block !important;
+}
+
+footer {
+  height: 50px;
+  background-color: #373a3c;
+  color: white;
+  margin-top: 50px;
+  text-align: center;
+  padding-top: 20px;
+}
+
+.jumbotron {
+  height: 200px;
+  margin-bottom: 0;
+  background-size: cover;
+  background: url(../images/burgen_1600x400.jpg) no-repeat;
+  color: white;
+  text-shadow: black 0.3em 0.3em 0.3em;
+}
+
+.mscheid-logo {
+  background: white;
+  border-radius: 10px;
+  width: 100px;
+}
+
+.btn-submit {
+  margin-left: 10px;
+}
+
+.homepage-list .list-group-item {
+  min-height: 200px;
+}
+
+.homepage-description {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 6;
+  line-height: 20px;
+  max-height: 135px;
+}
+
+.no-padding {
+  padding-left: 0;
+  padding-right: 0;
+
+}
+
+.homepage-opened-today {
+  font-weight: bold;
+  color: orange;
+}
+
+.homepage-category-link {
+  color: darkgrey;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.homepage-categories {
+  width: 250px;
+  color: black;
+  font-weight: bolder;
+  font-size: 24px;
+  text-align: center;
+  border: solid lightgray 1px;
+  border-radius: 10px;
+  margin: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.homepage-categories-containter {
+  margin: 0 auto;
+}
+
+.rooms-available {
+  color: green;
+  font-weight: bold;
+}
+
+.no-rooms-available {
+  color: red;
+  font-weight: bold;
+
 }

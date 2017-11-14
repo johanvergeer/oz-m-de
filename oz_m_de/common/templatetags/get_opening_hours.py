@@ -18,7 +18,7 @@ def get_today_opening_hours(organization: Organization) -> DayOpeningHours:
 def get_opening_hours(organization: Organization) -> str:
     opening_hours = organization.todays_opening_hours
 
-    if opening_hours:
+    try:
         retstring = _("<div class=\"homepage-opened-today\">{} to {}</div>")
 
         open_first = retstring.format(opening_hours.open_first.strftime(time_format),
@@ -29,5 +29,5 @@ def get_opening_hours(organization: Organization) -> str:
             return open_first + open_second
         return open_first
 
-    else:
+    except AttributeError:
         return _("<div class=\"homepage-opened-today\">Closed today</div>")
