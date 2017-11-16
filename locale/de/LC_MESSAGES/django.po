@@ -633,7 +633,7 @@ msgstr "Öffungszeiten Manderscheid"
 
 #: oz_m_de/templates/pages/home.html:9
 msgid "Opened today in Manderscheid"
-msgstr "Heute geöffned in Manderscheid"
+msgstr "Heute geöffnet in Manderscheid"
 
 #: oz_m_de/templates/pages/home.html:15
 msgid "BACK TO HOME"
@@ -641,7 +641,7 @@ msgstr "ZURÜCK ZUM HOMEPAGE"
 
 #: oz_m_de/templates/pages/home.html:56
 msgid "Opened today:"
-msgstr "Heute geöffned:"
+msgstr "Heute geöffnet:"
 
 #: oz_m_de/templates/pages/home.html:85
 msgid "No information available"
